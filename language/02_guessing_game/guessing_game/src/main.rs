@@ -1,6 +1,6 @@
 use rand::Rng;
 //Specifying a nested path to bring multiple items with the same prefix into scope
-use std::{cmp::Ordering,io}
+use std::{cmp::Ordering, io};
 //use std::cmp::Ordering;
 //use std::io;
 

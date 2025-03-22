@@ -1,4 +1,6 @@
 use std::io;
+use std::mem;
+
 //Rust has four primary scalar types: integers, floating-point numbers, Booleans, and characters
 fn main() {
     integer();
@@ -16,22 +18,33 @@ fn integer() {
     println!("i8 min = {x}");
     let x: i8 = 0b0111_1111;
     println!("i8 max = {x}");
+    println!("Size of i8: {} bytes", mem::size_of::<i8>());
     //8bit
     let x: u8 = 0x00;
     println!("u8 min = {x}");
     let x: u8 = 0xff;
     println!("u8 max = {x}");
+    println!("Size of u8: {} bytes", mem::size_of::<u8>());
     //16bit
     let x: i16 = -0x8000;
     println!("i16 min = {x}");
     //16bit
     let x: i16 = 0x7fff;
     println!("i16 max = {x}");
+    println!("Size of i16: {} bytes", mem::size_of::<i16>());
 
     println!("32bits i32 u32");
+    println!("Size of i32: {} bytes", mem::size_of::<i32>());
+    println!("Size of u32: {} bytes", mem::size_of::<u32>());
     println!("64bits i64 u64");
+    println!("Size of i64: {} bytes", mem::size_of::<i64>());
+    println!("Size of u64: {} bytes", mem::size_of::<u64>());
     println!("128bits i128 u128");
+    println!("Size of i128: {} bytes", mem::size_of::<i128>());
+    println!("Size of u128: {} bytes", mem::size_of::<u128>());
     println!("arch isize usize: 64bits if you're on a 64-bit architecture and 32bits if you're on a 32-bit architecture.");
+    println!("Size of isize: {} bytes", mem::size_of::<isize>());
+    println!("Size of usize: {} bytes", mem::size_of::<usize>());
 
     println!("Decimal 98_222");
     println!("Hex 0xff");
@@ -78,6 +91,7 @@ fn boolean_type() {
     //with explicit type annotation
     let f: bool = false;
     println!("let f:bool={f}");
+    println!("Size of bool: {} bytes", mem::size_of::<bool>());
 }
 
 //char type is four bytes in size and represents a Unicode Scalar Value;
