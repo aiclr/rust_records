@@ -67,6 +67,7 @@ fn main() {
     println!("{}-{}-{}", s1, s2, s3);
     let s = format!("{s1}-{s2}-{s3}");
     println!("{s}");
+    // Rust 加号拼接 仅支持 String + &str 不支持 String + String ；加号拼接 返回 String
     let s = s1 + "-" + &s2 + "-" + &s3;
     println!("{s}");
 

@@ -132,7 +132,12 @@ fn array_type() {
         "November",
         "December",
     ];
+    // 只有这种方式能初始化不同值
     let a: [i32; 5] = [1, 2, 3, 4, 5];
+    //创建包含 5 个元素的数组，所有元素都是 1
+    let a: [i32; 5] = [1; 5];
+    //创建包含 5 个元素的数组，所有元素都是 1 。类型推断为 [i32; 5]
+    let a = [1; 5];
     println!("Please enter an array index.");
     let mut index = String::new();
     io::stdin()
